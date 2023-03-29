@@ -1,0 +1,134 @@
+.howWeWork {
+  // ol потрібна для відображення цифр в кінці
+  background-color: var(--pure-white-color);
+  padding-bottom: 40px;
+  @include mq(tab) {
+    padding-bottom: 60px;
+  }
+  @include mq(desk) {
+    padding-bottom: 80px;
+  }
+  ol {
+    counter-reset: ol-numbers;
+    position: relative;
+    &::after {
+      content: ' ';
+      position: absolute;
+      bottom: 0px;
+      left: 0;
+      background-color: var(--pure-black-color);
+      display: block;
+      height: 1px;
+      width: 100%;
+    }
+  }
+
+  .howWeWork__item:nth-last-of-type(1)::before {
+    background-image: url(../images/vectors/done.svg);
+    width: 62px;
+    height: 62px;
+    bottom: 36px;
+    background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    background-size: cover;
+    @include mq(tab) {
+      top: 48px;
+    }
+    @include mq(desk) {
+      top: 56px;
+    }
+  }
+}
+
+.howWeWork__title {
+  @include font-title;
+  margin-bottom: 36px;
+  @include mq(tab) {
+    margin-bottom: 48px;
+  }
+  @include mq(desk) {
+    margin-bottom: 56px;
+  }
+}
+
+.howWeWork__item {
+  padding-top: 35px;
+  min-height: 289px;
+  position: relative;
+  @include mq(tab) {
+    padding-left: 92px;
+    min-height: 168px;
+  }
+  @include mq(desk) {
+    padding-left: 97px;
+    height: 166px;
+  }
+  &::before {
+    content: ' ';
+    position: absolute;
+    bottom: 47px;
+    left: 0;
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-image: url(../images/vectors/arrow-down.svg);
+    background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    background-size: cover;
+    @include mq(tab) {
+      bottom: 72px;
+    }
+    @include mq(desk) {
+      bottom: 78px;
+    }
+  }
+  &::after {
+    counter-increment: ol-numbers;
+    content: '0' counter(ol-numbers);
+    @include font-h1;
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 78px;
+    position: absolute;
+    bottom: 28px;
+    right: 0;
+    width: 84px;
+    height: 78px;
+    @include mq(tab) {
+      bottom: 42px;
+      top: 49px;
+    }
+    @include mq(desk) {
+      bottom: 48px;
+    }
+  }
+}
+
+.howWeWork__subtitle {
+  margin-bottom: 24px;
+  @include font-body-bold;
+  &::before {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--pure-black-color);
+    display: block;
+    height: 1px;
+    width: 100%;
+  }
+}
+.howWeWork__description {
+  padding-bottom: 109px;
+  @include font-body-reg;
+
+  @include mq(tab) {
+    width: 424px;
+    padding-bottom: 35px;
+  }
+  @include mq(desk) {
+    width: 780px;
+  }
+}

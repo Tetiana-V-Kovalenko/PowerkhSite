@@ -1,0 +1,31 @@
+.blog-preview__section {
+  background-color: var(--pure-white-color);
+  padding-bottom: 40px;
+
+  @include mq(tab) {
+    padding-bottom: 60px;
+  }
+
+  @include mq(desk) {
+    padding-bottom: 80px;
+  }
+}
+
+.blog-preview__section-list {
+  @extend .caseStudies__list;
+
+  @include mq(desk) {
+    justify-content: flex-start;
+    gap: 27px;
+  }
+}
+
+.blog-preview-section__body {
+  @extend .caseStudies__item;
+  &:hover p::after {
+    background-position: center;
+    width: 20px;
+    height: 24px;
+    margin-left: auto;
+  }
+}

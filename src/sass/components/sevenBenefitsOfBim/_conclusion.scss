@@ -1,0 +1,19 @@
+.conclusion {
+  padding-bottom: 20px;
+}
+
+.conclusion__title {
+  @include font-title-20;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.conclusion__img {
+  width: 100%;
+  padding-bottom: 40px;
+}
+
+.conclusion__text {
+  @include font-body-reg;
+  padding-bottom: 20px;
+}

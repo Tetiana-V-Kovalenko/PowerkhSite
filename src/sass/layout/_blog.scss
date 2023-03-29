@@ -1,0 +1,275 @@
+body.blog-page {
+  background-image: none;
+  background-color: var(--pure-white-color);
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: none;
+    background-color: var(--pure-white-color);
+  }
+}
+
+.blog-section {
+  padding-top: 100px;
+  padding-bottom: 40px;
+
+  @include mq(tab) {
+    padding-top: 120px;
+    padding-bottom: 60px;
+  }
+
+  @include mq(desk) {
+    padding-top: 140px;
+    padding-bottom: 80px;
+  }
+}
+
+.blog-section__title {
+  @include font-h1;
+}
+
+.slick-list {
+  overflow: hidden;
+}
+/* Лента слайдов */
+.slick-track {
+  display: flex;
+}
+
+.blog-section__slider {
+  margin-top: 40px;
+  position: relative;
+
+  @include mq(tab) {
+    margin-top: 50px;
+  }
+}
+
+.blog-section__slider:hover,
+.blog-section__slider:focus {
+  .blog-section__slider-img {
+    filter: grayscale(0);
+  }
+}
+.blog-section__slider:focus {
+  .blog-section__slider-img {
+    filter: grayscale(0);
+  }
+}
+
+.blog-section__slider-item {
+  display: block !important;
+
+  @include mq(desk) {
+    display: flex !important;
+    flex-direction: row;
+    gap: 28px;
+  }
+}
+
+.blog-section__slider-picture {
+  position: relative;
+  margin: 0 auto;
+  width: 297px;
+  height: 181px;
+
+  @include mq(tab) {
+    margin: 0 0;
+    width: 548px;
+    height: 352px;
+  }
+  @include mq(desk) {
+    width: 552px;
+    height: 357px;
+  }
+}
+
+.blog-section__slider-frame {
+  position: absolute;
+  z-index: 0;
+  box-sizing: border-box;
+
+  width: 280px;
+  height: 164px;
+
+  border: 2px solid var(--pure-black-color);
+
+  @include mq(tab) {
+    width: 516px;
+    height: 320px;
+  }
+  @include mq(desk) {
+    width: 516px;
+    height: 320px;
+  }
+}
+
+.blog-section__slider-img {
+  position: relative;
+  z-index: 10;
+  top: 17px;
+  left: 17px;
+  width: 280px;
+  height: 164px;
+
+  filter: grayscale(1);
+  transition: all 0.5s ease;
+
+  @include mq(tab) {
+    top: 32;
+    left: 32;
+    width: 516px;
+    height: 320px;
+  }
+  @include mq(desk) {
+    top: 0;
+    left: 0;
+    margin-top: 36px;
+    margin-left: 37px;
+    width: 516px;
+    height: 320px;
+  }
+}
+
+.blog-section__slider-text {
+  width: 100%;
+  @include mq(tab) {
+    width: 704px;
+  }
+  @include mq(desk) {
+    width: 554px;
+  }
+}
+
+.blog-section__slider-badge {
+  @include font-body-reg;
+  margin-top: 34px;
+}
+
+.blog-section__slider-title {
+  @include font-title;
+  width: calc(100% - 74px);
+  margin-top: 24px;
+  text-transform: uppercase;
+
+  @include mq(tab) {
+    width: 620px;
+  }
+  @include mq(desk) {
+    width: 360px;
+  }
+}
+
+.blog-section__slider-author {
+  @include font-body-reg;
+  margin-top: 8px;
+}
+
+.blog-section__slider-desc {
+  @include font-body-reg;
+
+  margin-top: 24px;
+
+  width: 100%;
+  @include mq(tab) {
+    width: 704px;
+  }
+  @include mq(desk) {
+    width: 554px;
+  }
+}
+
+.points {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 7;
+
+  @include mq(tab) {
+    -webkit-line-clamp: 3;
+  }
+  @include mq(desk) {
+    -webkit-line-clamp: 4;
+  }
+}
+
+.blog-section__slider-readMore {
+  @include font-button;
+
+  display: none;
+  margin-top: 24px;
+
+  @include mq(desk) {
+    display: block;
+  }
+}
+
+.blog-section__slider-seeProject {
+  @include font-button;
+  display: flex;
+  margin-top: 24px;
+
+  align-items: center;
+  justify-content: flex-start;
+
+  @include mq(desk) {
+    display: none;
+  }
+
+  &::before {
+    display: block;
+    content: '';
+    width: 22px;
+    height: 16px;
+    background-image: url('../images/vectors/eye.svg');
+    margin-right: 14px;
+  }
+}
+
+/* Точки (булиты) */
+.blog-section__slider .slick-dots {
+  z-index: 21 !important;
+
+  margin-top: 16px;
+  display: flex;
+  height: 18px;
+
+  align-items: center;
+  justify-content: center;
+  gap: 36px;
+
+  @include mq(tab) {
+  }
+  @include mq(desk) {
+    position: relative;
+    max-width: 554px;
+    margin-top: 0;
+    top: -18px;
+    left: 582px;
+    justify-content: flex-start;
+  }
+}
+.blog-section__slider .slick-dots li {
+  list-style: none;
+}
+
+/* Активная точка */
+.blog-section__slider .slick-dots li.slick-active {
+  padding: 2px 0;
+}
+
+.blog-section__slider .slick-dots li.slick-active button {
+  width: 6px;
+  height: 6px;
+}
+/* Элемент точки */
+.blog-section__slider .slick-dots li button {
+  display: block;
+  font-size: 0;
+  width: 10px;
+  height: 10px;
+  background-color: #0e0e0e;
+  border: none;
+  padding: 0;
+}

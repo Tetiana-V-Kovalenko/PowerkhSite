@@ -1,0 +1,112 @@
+.contacts-page .hero__block {
+  @include mq(tab) {
+    padding-top: 24px;
+  }
+}
+
+.contact-form__title {
+  @include font-title;
+  font-size: 24px;
+  line-height: 0.92;
+  text-transform: uppercase;
+  color: var(--dark-grey-color);
+  margin-bottom: 24px;
+}
+
+.contact-form {
+  width: 100%;
+  color: var(--dark-grey-color);
+  @include font-body-reg;
+}
+
+.contact-form__inputs-block {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.contact-form__input-wrap {
+  position: relative;
+}
+
+.contact-form__label {
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  pointer-events: none;
+  transition: all 0.2s ease;
+}
+.contact-form__input {
+  display: block;
+  width: 100%;
+  height: 36px;
+  padding: 10px 10px 5px;
+  border: none;
+  border-bottom: 1px solid var(--dark-grey-color);
+}
+
+.contact-form__input:focus {
+  outline: none;
+}
+
+.contact-form__input:focus ~ .contact-form__label,
+.contact-form__input:valid ~ .contact-form__label {
+  font-size: 12px;
+  top: -16px;
+}
+
+.contact-form__textarea {
+  width: 100%;
+  min-height: 134px;
+  margin-top: 8px;
+  padding: 10px;
+  resize: none;
+}
+
+.contact-submit {
+  margin-top: 24px;
+  position: relative;
+  width: 103px;
+  padding: 19px 64px 19px 0px;
+  display: block;
+  margin-left: auto;
+  background: var(--pure-white-color);
+  border: none;
+  @include font-button;
+  color: var(--dark-grey-color);
+}
+
+.contact-submit::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: calc(50% - 10px);
+
+  display: block;
+  width: 39px;
+  height: 2px;
+  background-color: var(--pure-black-color);
+
+  transform: scaleX(0);
+  transition: all 300ms linear;
+}
+
+.contact-submit:hover::after,
+.contact-submit:focus::after {
+  transform: scaleX(1);
+}
+
+.contact-submit::before {
+  content: '';
+
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 56px;
+  height: 56px;
+  background-image: url(../images/vectors/arrow.svg);
+  background-size: 100% 100%;
+  -o-background-size: 100% 100%;
+  -webkit-background-size: 100% 100%;
+  background-size: cover;
+}

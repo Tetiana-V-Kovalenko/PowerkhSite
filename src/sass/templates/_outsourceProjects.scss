@@ -1,0 +1,115 @@
+.outsourceProjects {
+  background-color: var(--pure-white-color);
+
+  padding-bottom: 40px;
+  @include mq(tab) {
+    padding-bottom: 60px;
+  }
+  @include mq(desk) {
+    padding-bottom: 80px;
+  }
+}
+
+.bim-automation-services + .outsourceProjects {
+  padding-top: 40px;
+
+  @include mq(tab) {
+    padding-top: 60px;
+  }
+  @include mq(desk) {
+    padding-top: 80px;
+  }
+}
+
+.outsourceProjects__title {
+  @include font-title;
+  padding-bottom: 40px;
+  @include mq(tab) {
+    padding-bottom: 52px;
+  }
+}
+
+.outsourceProjects__subtitle {
+  text-transform: uppercase;
+  @include font-mono-14-20;
+  margin-bottom: 34px;
+  max-width: 100%;
+  padding-left: 80px;
+  @include mq(tab) {
+    max-width: 100%;
+    margin-bottom: 32px;
+  }
+  @include mq(desk) {
+    width: 462px;
+    margin-bottom: 0;
+    padding-left: 175px;
+
+    margin-right: 40px;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    top: -11;
+    left: 0;
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-image: url(../images/vectors/grey-arrow-right.svg);
+    background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    background-size: cover;
+
+    @include mq(desk) {
+      top: 0;
+      left: 97;
+    }
+  }
+}
+
+.outsourceProjects > .outsourceProjects__description {
+  padding-bottom: 40px;
+}
+
+.outsourceProjects__description {
+  @include font-body-reg;
+}
+
+.js-outsourceProjects__description {
+  margin-top: 20px;
+  @include font-body-reg;
+}
+
+.outsourceProjects__item > .outsourceProjects__description {
+  @include mq(tab) {
+    margin-left: 80px;
+  }
+  @include mq(desk) {
+    margin-left: 0;
+    max-width: 552px;
+  }
+}
+
+.outsourceProjects__list-description {
+  @include font-body-reg;
+  margin: 40px auto;
+  @include mq(tab) {
+    margin: 52px auto;
+  }
+}
+
+.outsourceProjects__list {
+  @include font-body-reg;
+}
+
+.outsourceProjects__item {
+  position: relative;
+
+  &:not(:first-child) {
+    margin-top: 32px;
+  }
+  @include mq(desk) {
+    display: flex;
+    align-items: center;
+  }
+}

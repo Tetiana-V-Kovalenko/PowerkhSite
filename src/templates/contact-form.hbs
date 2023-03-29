@@ -1,0 +1,52 @@
+{{! підставити об'єкт }}
+{{! приклад об'єкта: {
+  subtitle: 'contacts',
+  firstFieldPlaceholder: 'How can we call you?',
+  secondFieldPlaceholder: 'Phone or E-mail*',
+  textAreaTitle: 'Message',
+  btnText: 'Send',
+}; }}
+
+<h2 class='contact-form__title'>{{this.subtitle}}</h2>
+<form class='contact-form' name='contact-form'>
+  <div class='contact-form__inputs-block'>
+    <div class='contact-form__input-wrap'>
+      <input
+        type='text'
+        class='contact-form__input'
+        name='name'
+        id="contact-form-name"
+        required
+        placeholder=''
+      />
+      <label class='contact-form__label' for="contact-form-name">{{this.firstFieldPlaceholder}}</label>
+    </div>
+
+    <div class='contact-form__input-wrap'>
+      <input
+        type='text'
+        class='contact-form__input'
+        name='contact'
+        id="contact-form-contact"
+        required
+        placeholder=''
+      />
+      <label class='contact-form__label' for="contact-form-contact">{{this.secondFieldPlaceholder}}</label>
+       <span class="error-message error-message-contacts  visually-hidden"
+              >Please, enter a validate contact</span
+            >
+    </div>
+
+    <label htmlFor='message' class='contact-form__text-area-label'>
+      {{this.textAreaTitle}}
+      <textarea
+        class='contact-form__textarea'
+        name='message'
+        id="contact-form-message"
+        placeholder=' '
+      ></textarea>
+    </label>
+  </div>
+  <button type='submit' class='contact-submit' for="contact-form-message">Send
+  </button>
+</form>

@@ -1,0 +1,24 @@
+{{!-- підставити об'єкт --}}
+{{!-- приклад об'єкта:  {description: 'опис', list: [{number: 'виділені цифри', text: 'права частина тексту'}]} --}}
+
+{{!-- <section class="impact-on-business"> --}}
+  <div class="impact-on-business__container container">
+    <h2 class="impact-on-business__title">Impact on business</h2>
+    <div class="impact-on-business__block">
+      <p class="impact-on-business__description">
+       {{this.description}}
+      </p>
+      <ul class="impact-on-business__list">
+        {{#each this.list}}
+        <li class="impact-on-business__item">
+          <span class="impact-on-business__number">{{this.number}}</span>
+          <p class="impact-on-business__statistics">
+            {{this.text}}
+          </p>
+        </li>
+        {{/each}}
+        
+      </ul>
+    </div>
+  </div>
+

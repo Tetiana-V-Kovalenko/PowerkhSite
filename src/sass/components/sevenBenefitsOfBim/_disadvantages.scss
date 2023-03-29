@@ -1,0 +1,35 @@
+.disadvantages {
+  padding-bottom: 20px;
+}
+
+.container__blog {
+  @include mq(desk) {
+    padding-left: 249px;
+    padding-right: 441px;
+  }
+}
+
+.disadvantages__title {
+  @include font-title-14;
+  padding-bottom: 12px;
+}
+
+.disadvantages__img {
+  width: 100%;
+  padding: 20px 0 40px;
+}
+
+.disadvantages__text,
+.disadvantages__softItems {
+  @include font-body-reg;
+  padding-bottom: 20px;
+}
+
+.disadvantages__softItems::before {
+  display: inline-block;
+  margin-right: 10px;
+  content: '';
+  width: 10px;
+  height: 9px;
+  background-image: url('../images/vectors/arrow-right-black.svg');
+}

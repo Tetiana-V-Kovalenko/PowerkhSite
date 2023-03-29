@@ -1,0 +1,96 @@
+.bim-automation-services {
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  @include mq(desk) {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+}
+
+.bim-automation-services__title {
+  @include font-title;
+  margin-bottom: 24px;
+}
+
+.bim-automation-services__block {
+  padding: 40px 20px;
+  background-color: var(--pure-white-color);
+
+  @include mq(tab) {
+    padding: 52px;
+  }
+  @include mq(desk) {
+    padding: 80px;
+  }
+}
+
+.bim-automation-services__text,
+.bim-automation-services__topic,
+.bim-automation-services__item,
+.bim-automation-services__extra {
+  @include font-body-reg;
+}
+
+.bim-automation-services__text {
+  @include mq(desk) {
+    max-width: 768px;
+  }
+}
+
+.bim-automation-services__extra {
+  margin-top: 19px;
+}
+
+.bim-automation-services__topic {
+  margin-top: 40px;
+  margin-bottom: 50px;
+
+  @include mq(tab) {
+    margin-top: 52px;
+    margin-bottom: 62px;
+  }
+
+  @include mq(desk) {
+    margin-bottom: 63px;
+  }
+}
+
+.bim-automation-services__list {
+  padding-left: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 34px;
+
+  @include mq(tab) {
+    gap: 53px;
+  }
+  @include mq(desk) {
+    flex-direction: row;
+    gap: 35px 116px;
+  }
+}
+
+.bim-automation-services__item {
+  position: relative;
+  min-height: 40px;
+  &::before {
+    content: ' ';
+    position: absolute;
+    display: block;
+    left: -60px;
+    top: -11px;
+    width: 40px;
+    height: 40px;
+    background-image: url(../images/vectors/arrow_long_right.svg);
+  }
+
+  @include mq(tab) {
+    min-height: 0;
+  }
+  @include mq(desk) {
+    min-height: 41px;
+    width: 400px;
+  }
+}

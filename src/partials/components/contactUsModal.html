@@ -1,0 +1,85 @@
+<div class="backdrop question visually-hidden">
+  <div class="container">
+    <div class="contact-modal__block">
+      <img
+        class="contact-modal__frame-down-left"
+        src="../images/vectors/frame-down-left.svg"
+        loading="lazy"
+        alt="decorative element"
+      />
+      <img
+        class="contact-modal__frame-up-left"
+        src="../images/vectors/frame-up-left.svg"
+        loading="lazy"
+        alt="decorative element"
+      />
+      <img
+        class="contact-modal__frame-down-right"
+        src="../images/vectors/frame-down-right.svg"
+        loading="lazy"
+        alt="decorative element"
+      />
+      <img
+        class="contact-modal__frame-up-right"
+        src="../images/vectors/frame-up-right.svg"
+        loading="lazy"
+        alt="decorative element"
+      />
+      <div class="contact-modal__content">
+        <button
+          type="button"
+          class="contact-modal__close-btn"
+          aria-label="close modal btn"
+        >
+          <svg class="contact-modal__close-icon" width="24" height="24">
+            <use href="../images/vectors/sprite.svg#icon-close"></use>
+          </svg>
+        </button>
+        <h2 class="contact-modal__title">HAVE ANY QUESTIONS? CONTACT US!</h2>
+        <form
+          class="contact-modal__form question-form"
+          name="contact-modal-form"
+        >
+          <div
+            class="contact-modal__input-wrap contact-modal__input-wrap--first"
+          >
+            <input
+              type="text"
+              class="contact-modal__input"
+              name="name"
+              id="name-customer"
+              required
+              placeholder=""
+            />
+            <label class="contact-modal__label" for="name-customer"
+              >How can we call you?</label
+            >
+          </div>
+
+          <div
+            class="contact-modal__input-wrap contact-modal__input-wrap--second"
+          >
+            <input
+              type="text"
+              class="contact-modal__input"
+              name="contact"
+              id="contacts-customer"
+              required
+              placeholder=""
+            />
+            <label class="contact-modal__label" for="contacts-customer"
+              >Phone or E-mail*</label
+            >
+            <span class="error-message visually-hidden"
+              >Please, enter a validate contact</span
+            >
+          </div>
+          <button class="contact-modal__btn modal-submit" type="submit">
+            Send
+            <img src="../images/vectors/arrow.svg" loading="lazy" alt="arrow" />
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

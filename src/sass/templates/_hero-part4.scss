@@ -1,0 +1,33 @@
+.hero-part-four {
+  padding-top: 140px;
+  height: 350px;
+  @include mq(tab) {
+    height: 308px;
+  }
+
+  @include mq(desk) {
+    padding-top: 260px;
+    height: 450px;
+  }
+
+  .container__hero {
+    padding-right: 28px;
+    padding-left: 28px;
+
+    @include mq(tab) {
+      padding-right: 131px;
+      padding-left: 131px;
+    }
+
+    @include mq(desk) {
+      padding-right: 131px;
+      padding-left: 131px;
+    }
+  }
+}
+
+.hero-part-four__title {
+  @include font-title;
+  color: var(--pure-white-color);
+  text-align: center;
+}
